@@ -363,7 +363,8 @@ div[class^="pointer"]{
 }
 .skills span{
 	display: block;
-	
+	line-height: 12px;
+	font-size: 10px;
 }
 .sBar{
 	display: none;
@@ -372,7 +373,7 @@ div[class^="pointer"]{
 .skillBar{
 	position: absolute;
 	left: 69px;
-	top:16%;
+	top:17%;
 	width: 80%;
 	overflow: hidden;
 }
@@ -380,7 +381,7 @@ div[class^="pointer"]{
 	margin-left: -800px;
 	height: 30px;
 	width: 90%;
-	margin-top: 34px;
+	margin-top: 28px;
 	border-radius: 0px 10px 10px 0px;
 }
 .skillBar0{
@@ -448,7 +449,7 @@ div[class^="pointer"]{
 	font-family: "微软雅黑";
 	width: 80%;
 	height: 115px;
-	margin-top: 13px;
+	margin-top: 8px;
 	padding: 10px;
 	text-align: center;
 	background: rgba(255,255,255,0.2);
