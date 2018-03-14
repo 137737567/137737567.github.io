@@ -85,7 +85,7 @@ body, html{
 /*左上角框*/
 .resume{
 	position: absolute;
-	top: 20px;
+	top: 8px;
 	left: 5%;
 	height: 60px;
 	width: 180px;
@@ -114,7 +114,7 @@ body, html{
 /*音乐*/
 #control{
 	position: absolute;
-	top: 20px;
+	top: 8px;
 	right: 2%;
 	z-index: 11;
 	width: 100px;
@@ -372,7 +372,7 @@ div[class^="pointer"]{
 .skillBar{
 	position: absolute;
 	left: 69px;
-	top:15%;
+	top:16%;
 	width: 80%;
 	overflow: hidden;
 }
@@ -380,7 +380,7 @@ div[class^="pointer"]{
 	margin-left: -800px;
 	height: 30px;
 	width: 90%;
-	margin-top: 37px;
+	margin-top: 34px;
 	border-radius: 0px 10px 10px 0px;
 }
 .skillBar0{
@@ -447,8 +447,8 @@ div[class^="pointer"]{
 	position: relative;
 	font-family: "微软雅黑";
 	width: 80%;
-	height: 120px;
-	margin-top: 18px;
+	height: 115px;
+	margin-top: 13px;
 	padding: 10px;
 	text-align: center;
 	background: rgba(255,255,255,0.2);
