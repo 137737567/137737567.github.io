@@ -1,0 +1,1218 @@
+body, html{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#container, .section {
+    height: 100%;
+}
+.section{
+	position: relative;
+}
+#container{
+	position: relative;
+    transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+};
+.section{
+	position: absolute;
+    background-color: #000;
+    background-size: cover;
+    background-position: 50% 50%;
+    overflow: hidden;
+    width: 100%;
+}
+
+#section0 {
+    background-color: #8a8cb2;
+}
+
+#section1 {
+    background-color: #d47767;
+}
+
+#section2 {
+    background-color: #73b296;
+    overflow: hidden;
+}
+
+#section3 {
+    background-color: #466DBA;
+}
+
+/*遮罩*/
+#mask{
+	position: relative;
+}
+#mask ul{
+	position: absolute;
+	right: 62px;
+	width: 106px;
+	top: 263px;
+	text-align: right;
+	z-index: 10;
+	border-right:1px gray dashed;
+}
+#mask ul li{
+	position: relative;
+	padding-right: 20px;
+	font-size: 20px;
+	height: 50px;
+	line-height: 50px;
+	font-weight: bold;
+	font-family: "微软雅黑";
+	z-index: 9;
+}
+#mask ul span{
+	position: absolute;
+	display: inline-block;
+	z-index: 8;
+	top: 0px;
+	left: 0px;
+	height: 50px;
+	width: 92px;
+	border-radius: 15px;
+	background: rgba(255,140,120,0.7);
+	transition: all .6s ease .1s;
+	-moz-transition: all .6s ease .1s;
+	-webkit-transition: all .6s ease .1s;
+}
+/*左上角框*/
+.resume{
+	position: absolute;
+	top: 30px;
+	left: 40px;
+	height: 80px;
+	width: 240px;
+	line-height: 80px;
+	font-family: "微软雅黑";
+	text-align: right;
+	font-size: 23px;
+	padding-right: 15px;
+	border-radius: 10px;
+	background: rgba(255,255,255,0.4);
+	z-index: 11;
+}
+.resume span{
+	position: absolute;
+	display: inline-block;
+	top: 5px;
+	left: 10px;
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	background: url(../img/图片.jpg) no-repeat;
+	background-size: cover;
+}
+/*音乐*/
+#control{
+	position: absolute;
+	top: 30px;
+	right: 40px;
+	z-index: 11;
+	width: 120px;
+	height: 110px;
+	overflow: hidden;
+}
+#control a{	
+	display: inline-block;
+	position: absolute;
+	left: 20px;
+	width: 70px;
+	height: 70px;
+	line-height: 70px;;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	text-align: center;
+	color: rgba(255,255,255,0.7);
+	font-weight: bolder;
+	background: url(../music/ひまわりの約束-秦基博.jpg);
+	background-size: cover;
+	animation: round 13s linear infinite;
+	
+}
+#control a span{
+	display: block;
+	animation: round1 13s linear infinite;
+}
+#control p{	
+	position: absolute;
+	display: block;
+	width: 80px;
+	bottom: 10px;
+	font-family: "微软雅黑";
+	white-space: nowrap;
+	animation: round2 5s linear infinite;
+}
+@keyframes round{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+@keyframes round1{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(-360deg);
+	}
+}
+@keyframes round2{
+	from{
+		margin-left: 20px;
+	}
+	to{
+		margin-left: -100px;
+	}
+}
+
+/*水波效果*/
+div[class^="pointer"]{
+	position: fixed;
+	width: 120px;
+	height: 120px;
+	right: 80px;
+	z-index: 11;
+}
+.pointer0{
+	top: 150px;
+}
+.pointer1{
+	top: 200px;
+}
+.pointer2{
+	top: 250px;
+}
+.pointer3{
+	top: 300px;
+}
+@keyframes warn {
+	0% {
+		transform: scale(0.3);
+		-webkit-transform: scale(0.3);
+		opacity: 0.0;
+	}
+	
+	25% {
+		transform: scale(0.3);
+		-webkit-transform: scale(0.3);
+		opacity: 0.1;
+	}
+	
+	50% {
+		transform: scale(0.5);
+		-webkit-transform: scale(0.5);
+		opacity: 0.3;
+	}
+	
+	75% {
+		transform: scale(0.8);
+		-webkit-transform: scale(0.8);
+		opacity: 0.5;
+	}
+	
+	100% {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		opacity: 0.0;
+	}
+}
+
+@keyframes warn1 {
+	0% {
+		transform: scale(0.3);
+		-webkit-transform: scale(0.3);
+		opacity: 0.0;
+	}
+	
+	25% {
+		transform: scale(0.3);
+		-webkit-transform: scale(0.3);
+		opacity: 0.1;
+	}
+	
+	50% {
+		transform: scale(0.3);
+		-webkit-transform: scale(0.3);
+		opacity: 0.3;
+	}
+	
+	75% {
+		transform: scale(0.5);
+		-webkit-transform: scale(0.5);
+		opacity: 0.5;
+	}
+	
+	100% {
+		transform: scale(0.8);
+		-webkit-transform: scale(0.8);
+		opacity: 0.0;
+	}
+}
+
+/* 保持大小不变的小圆点 */
+.dot {
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	left: 133px;
+	top: 133px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%; 
+	background-color:#ff8c78; /* 实心圆 ，如果没有这个就是一个小圆圈 */
+	z-index: 2;
+}
+/* 产生动画（向外扩散变大）的圆圈 第一个圆 */
+.pulse {
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	left: 120px;
+	top: 120px;
+	background-color:#ff8c78;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	z-index: 1;
+	opacity: 0;
+	-webkit-animation: warn 2s ease-out;
+	-moz-animation: warn 2s ease-out;
+	animation: warn 2s ease-out;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	box-shadow: 1px 1px 30px #ff8c78; /* 阴影效果 */
+}
+
+/*------------第1页--------------*/
+.info{
+	position: relative;
+	padding: 30px;
+	top: 30%;
+	left: 16%;
+	width: 60%;
+	height: 50%;
+	background: rgba(255,255,255,0.2);
+	border-radius: 10px;
+	overflow: hidden;
+}
+.info li{
+	color: white;
+	line-height: 30px;
+	font-size: 20px;
+	font-family: "微软雅黑";
+	width: 100%;
+	border-bottom: 1px solid white;
+	animation: info 2s ease forwards;
+}
+@keyframes info{
+	from{margin-top: 600px;}
+	to{margin-top: 60px;}
+}
+
+.info:hover{
+	box-shadow:0px 15px 15px rgba(0,0,0,0.4);
+}
+#section0 span{
+	position: absolute;
+	display: inline-block;
+	top: 16%;
+	left: 43%;
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+	background: url(../img/2016022.jpeg) no-repeat;
+	background-size: cover;
+	z-index: 20;
+}
+.info li p{
+	font-size: 22px;
+	display: inline;
+	color: rgba(255,140,120,0.7);
+}
+/*第二页*/
+#section1 p{
+	position: absolute;
+	display: block;
+	top:18%;
+	text-align: center;
+	left: 45%;
+	width: 150px;
+	height: 50px;
+	font-size: 28px;
+	font-family: "微软雅黑";
+	border-bottom: 2px solid gray;
+	z-index: 11;
+}
+.skills{
+	position: absolute;
+	left: 17%;
+	top:74%;
+	height: 110px;
+	padding-top: 10px;
+	padding-left: 50px;
+	width: 850px;
+	text-align: center;
+	background: rgba(255,255,255,0.2);
+	border-radius: 10px;
+}
+.skills li{
+	float: left;
+	width: 120px;
+}
+.skills img{
+	height: 70px;
+	top:5px
+}
+.skills span{
+	display: block;
+	
+}
+.sBar{
+	position: absolute;
+	left: 17%;
+	top: 0px;
+	height: 200px;
+	overflow: hidden;
+}
+.sBar li{
+	float: left;
+	height: 200px;
+	width: 42px;
+	margin-left: 80px;
+	margin-top: -200px;
+	border-radius:0px 0px 10px 10px ;
+	animation-fill-mode: forwards;
+   	filter:alpha(opacity=50);  
+  	-moz-opacity:0.5;  
+  	-khtml-opacity: 0.5;  
+  	opacity: 0.5;  
+}	
+.sBar0{
+	background: #4fc5c7;
+}
+@keyframes sBar0{
+	from{margin-top: -200px;}
+	to{margin-top: -60px;}
+}
+.sBar1{
+	background: #97ec71;
+}
+@keyframes sBar1{
+	from{margin-top: -200px;}
+	to{margin-top: -40px;}
+}
+.sBar2{
+	background: #dbf977;
+}
+@keyframes sBar2{
+	from{margin-top: -200px;}
+	to{margin-top: -100px;}
+}
+.sBar3{
+	background: #de9dd6;
+}
+@keyframes sBar3{
+	from{margin-top: -200px;}
+	to{margin-top: -120px;}
+}
+.sBar4{
+	background: #fa6e86;
+}
+@keyframes sBar4{
+	from{margin-top: -200px;}
+	to{margin-top: -80px;}
+}
+.sBar5{
+	background: #fff2b5;
+}
+@keyframes sBar5{
+	from{margin-top: -200px;}
+	to{margin-top: -30px;}
+}
+.sBar6{
+	background: #d49ea2;
+}
+@keyframes sBar6{
+	from{margin-top: -200px;}
+	to{margin-top: -10px;}
+}
+/*---------------------------*/
+.skillBar{
+	position: absolute;
+	left: 17%;
+	bottom: 26%;
+	height: 300px;
+	overflow: hidden;
+}
+.skillBar li{
+	float: left;
+	height: 300px;
+	width: 42px;
+	margin-left: 80px;
+	margin-top: 300px;
+	border-radius: 10px 10px 0px 0px;
+	animation-fill-mode: forwards;
+}
+.skillBar0{
+	background: #4fc5c7;
+}
+@keyframes skillBar0{
+	from{margin-top: 300px;}
+	to{margin-top: 80px;}
+}
+.skillBar1{
+	background: #97ec71;
+}
+@keyframes skillBar1{
+	from{margin-top: 300px;}
+	to{margin-top: 100px;}
+}
+.skillBar2{
+	background: #dbf977;
+}
+@keyframes skillBar2{
+	from{margin-top: 300px;}
+	to{margin-top: 20px;}
+}
+.skillBar3{
+	background: #de9dd6;
+}
+@keyframes skillBar3{
+	from{margin-top: 300px;}
+	to{margin-top: 0px;}
+}
+.skillBar4{
+	background: #fa6e86;
+}
+@keyframes skillBar4{
+	from{margin-top: 300px;}
+	to{margin-top: 50px;}
+}
+.skillBar5{
+	background: #fff2b5;
+}
+@keyframes skillBar5{
+	from{margin-top: 300px;}
+	to{margin-top: 110px;}
+}
+.skillBar6{
+	background: #d49ea2;
+}
+@keyframes skillBar6{
+	from{margin-top: 300px;}
+	to{margin-top: 150px;}
+}
+
+/*------------第3页--------------*/
+#section2 p{
+	position: absolute;
+	display: block;
+	top:28%;
+	text-align: center;
+	left: 45%;
+	width: 150px;
+	height: 50px;
+	font-size: 28px;
+	font-family: "微软雅黑";
+	border-bottom: 2px solid gray;
+	z-index: 11;
+}
+
+/*项目*/
+.items{
+	position: absolute;
+	left: 2%;
+	top: 30%;
+	z-index: 11;
+	text-align: center;
+}
+.items li{
+	position: relative;
+	float: left;
+	width: 290px;
+	height: 170px;
+	margin-top: 10px;
+	margin-left: 230px;
+	padding: 10px;
+	text-align: center;
+	background: rgba(255,255,255,0.2);
+	border-radius: 20px;
+}
+/*剪裁*/
+.items li:before{
+	content: " ";
+	display: block;
+	position: absolute;
+	width:290px;
+	height:150px;
+	top: 10px;
+	left: 10px;
+	border:3px solid orange;
+	z-index:10;
+	box-sizing: border-box;
+	-webkit-animation: liner 6s infinite linear;
+}
+
+@keyframes  liner{
+	0%,100%{
+		clip:rect(0px,290px,150px,147px);
+	}
+	25%{
+		clip:rect(0px,290px,3px,0px);
+	}
+	50%{
+		clip:rect(0px,3px,150px,0px);
+	}
+	75%{
+		clip:rect(147px,290px,150px,0px);
+	}			
+}
+
+.items li:last-child{
+	margin-left: 500px;
+}
+.items img{
+	
+	height: 150px;
+	width: 290px;
+}
+.items span{
+	display: block;
+	font-size:20px;
+}
+/*背景*/
+.colorback{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+}
+
+li[class^="barL"]{
+	position: absolute;
+	float: left;
+	width: 70px;
+	bottom: -900px;
+	transform: skewX(-30deg);
+	border-radius: 20px 80px 0px 0px;
+	animation-fill-mode: forwards;
+}
+li[class^="barR"]{
+	position: absolute;
+	float: right;
+	width: 70px;
+	bottom: -900px;
+	transform: skewX(30deg);
+	border-radius: 80px 20px 0px 0px;
+	animation-fill-mode: forwards;
+}
+.barL0{
+	height: 99%;
+	background: #24C2AD;
+}
+.barL1{
+	height: 99%;
+	background: #CDCA89;
+}
+.barL2{
+	height: 99%;
+	background: #FFECDA;
+}
+.barL3{
+	height: 99%;
+	background: #F29C9C;
+}
+.barL4{
+	height: 99%;
+	background: #9ACDAC;
+}
+.barL5{
+	height: 99%;
+	background: #D9F7E6;
+}
+.barL6{
+	height: 99%;
+	background: #E7E4F3;
+}
+.barL7{
+	height: 99%;
+	background: #A8D0E2;
+	z-index: 6;
+}
+.barL8{
+	height: 99%;
+	background: #63A9C8;
+	z-index: 8;
+}
+.barL9{
+	height: 102%;
+	background: #E0BFC8;
+	z-index: 7;
+}
+.barR0{
+	height: 99%;
+	background: #24C2AD;
+}
+.barR1{
+	height: 99%;
+	background: #CDCA89;
+}
+.barR2{
+	height: 99%;
+	background: #FFECDA;
+}
+.barR3{
+	height: 99%;
+	background: #F29C9C;
+}
+.barR4{
+	height: 99%;
+	background: #9ACDAC;
+}
+.barR5{
+	height: 99%;
+	background: #D9F7E6;
+}
+.barR6{
+	height: 99%;
+	background: #E7E4F3;
+}
+.barR7{
+	height: 99%;
+	background: #A8D0E2;
+	z-index: 6;
+}
+.barR8{
+	height: 99%;
+	background: #63A9C8;
+	z-index: 8;
+}
+.barR9{
+	height: 102%;
+	background: #E0BFC8;
+	z-index: 7;
+}
+
+@keyframes backColorL0{
+	from{
+		bottom: -700px;
+		left: -100px;
+	}
+	to{
+		bottom: 0px;
+		left: -150px;
+	}
+}
+@keyframes backColorL1{
+	from{
+		bottom: -700px;
+		left: -100px;
+	}
+	to{
+		bottom: 0px;
+		left: -80px;
+	}
+}
+@keyframes backColorL2{
+	from{
+		bottom: -700px;
+		left: -100px;
+	}
+	to{
+		bottom: 0px;
+		left: -10px;
+	}
+}
+@keyframes backColorL3{
+	from{
+		bottom: -700px;
+		left: -100px;
+	}
+	to{
+		bottom: 0px;
+		left: 60px;
+	}
+}
+@keyframes backColorL4{
+	from{
+		bottom: -700px;
+		left: -100px;
+	}
+	to{
+		bottom: 0px;
+		left: 120px;
+	}
+}
+@keyframes backColorL5{
+	from{
+		bottom: -700px;
+		left: -100px;
+	}
+	to{
+		bottom: 0px;
+		left: 190px;
+	}
+}
+@keyframes backColorL6{
+	from{
+		bottom: -700px;
+		left: -100px;
+	}
+	to{
+		bottom: 0px;
+		left: 260px;
+	}
+}
+@keyframes backColorL7{
+	from{
+		bottom: -700px;
+		left: -100px;
+	}
+	to{
+		bottom: 0px;
+		left: 322px;
+	}
+}
+@keyframes backColorL8{
+	from{
+		bottom: -700px;
+		left: -100px;
+	}
+	to{
+		bottom: 0px;
+		left: 392px;
+	}
+}
+@keyframes backColorL9{
+	from{
+		bottom: -700px;
+		left: -100px;
+	}
+	to{
+		bottom: 0px;
+		left: 469px;
+	}
+}
+
+@keyframes backColorR0{
+	from{
+		bottom: -700px;
+		right: -100px;
+	}
+	to{
+		bottom: 0px;
+		right: -150px;
+	}
+}
+@keyframes backColorR1{
+	from{
+		bottom: -700px;
+		right: -100px;
+	}
+	to{
+		bottom: 0px;
+		right: -80px;
+	}
+}
+@keyframes backColorR2{
+	from{
+		bottom: -700px;
+		right: -100px;
+	}
+	to{
+		bottom: 0px;
+		right: -10px;
+	}
+}
+@keyframes backColorR3{
+	from{
+		bottom: -700px;
+		right: -100px;
+	}
+	to{
+		bottom: 0px;
+		right: 60px;
+	}
+}
+@keyframes backColorR4{
+	from{
+		bottom: -700px;
+		right: -100px;
+	}
+	to{
+		bottom: 0px;
+		right: 120px;
+	}
+}
+@keyframes backColorR5{
+	from{
+		bottom: -700px;
+		right: -100px;
+	}
+	to{
+		bottom: 0px;
+		right: 190px;
+	}
+}
+@keyframes backColorR6{
+	from{
+		bottom: -700px;
+		right: -100px;
+	}
+	to{
+		bottom: 0px;
+		right: 260px;
+	}
+}
+@keyframes backColorR7{
+	from{
+		bottom: -700px;
+		right: -100px;
+	}
+	to{
+		bottom: 0px;
+		right: 322px;
+	}
+}
+@keyframes backColorR8{
+	from{
+		bottom: -700px;
+		right: -100px;
+	}
+	to{
+		bottom: 0px;
+		right: 392px;
+	}
+}
+@keyframes backColorR9{
+	from{
+		bottom: -700px;
+		right: -100px;
+	}
+	to{
+		bottom: 0px;
+		right: 469px;
+	}
+}
+
+/*------------第4页---------------*/
+/*内容*/
+.experience{
+	position: absolute;
+	left: 38%;
+	top: 35%;
+	z-index: 11;
+	border-left: 8px solid gray;
+}
+.experience li{
+	position: relative;
+	width: 370px;
+	height: 90px;
+	margin-top: 18px;
+	padding-left: 25px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	font-size: 25px;
+	color: white;
+}
+.experience li .month{
+	position: absolute;
+	display: inline-block;
+	left: -80px;
+	top: 8px;	
+	font-size: 20px;
+	color: orange;
+}
+.experience li .content{
+	display: block;
+	line-height: 30px;
+}
+.experience li .text{
+	position: absolute;
+	display: block;
+	top: -20px;
+	font-size: 20px;
+	color: orange;
+}
+.experience li:nth-child(n+2) .point{
+	position: absolute;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	top: 10px;
+	left: -14px;
+	border: 4px solid orange;
+	border-radius: 50%;
+	background: white;
+	transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+}
+.experience li:nth-child(n+2):hover .point,.experience li:nth-child(n+2) .point:hover{
+	border: 8px solid orange;
+	left: -17px;
+	top: 6px;
+}
+
+/*2018大圆*/
+.experience li:first-child span{
+	position: absolute;
+	display: block;
+	width: 90px;
+	height: 70px;
+	padding-top: 20px;
+	line-height: 30px;
+	text-align: center;
+	left: -54px;
+	top: -35px;
+	font-size: 30px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	color: orange;
+	border: 5px solid gray;
+	border-radius: 50%;
+	background: white;
+}
+.experience li:first-child p{
+	line-height: 30px;
+	font-size: 20px;
+	color: orange;
+	
+}
+
+/*背景*/
+#bluesky{
+	position: relative;
+	width: 100%;
+	top: 20px;
+	margin: 0 auto;
+	height: 400px;
+	overflow: hidden;
+	padding-left: 10%;
+}
+div[class^="rainbow"]{
+	position: absolute;
+	width: 1200px;
+	border-radius: 50%;
+	background: transparent;
+	top:400px;
+}
+.rainbow0{
+	height: 950px;
+	border-top: 50px solid #F4456E;
+	border-left: 50px solid #F4456E;
+	border-right: 50px solid #F4456E;
+	
+}
+.rainbow1{
+	height: 1050px;
+	border-top: 50px solid #13DAAC;
+	border-left: 50px solid #13DAAC;
+	border-right: 50px solid #13DAAC;
+	
+}
+.rainbow2{
+	height: 1150px;
+	border-top: 50px solid #0EA9E2;
+	border-left: 50px solid #0EA9E2;
+	border-right: 50px solid #0EA9E2;
+}
+@keyframes rainbow0{
+	from{
+		top:400px;
+	}
+	to{
+		top: 0px;
+	}
+}
+@keyframes rainbow1{
+	from{
+		top:400px;
+	}
+	to{
+		top: 48px;
+	}
+}
+@keyframes rainbow2{
+	from{
+		top:400px;
+	}
+	to{
+		top: 96px;
+	}
+}
+.cloud1{
+    width: 103px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 42%;
+    top:38%;
+    animation:float1 60s ease infinite;
+}
+@keyframes float1{
+	0%,100%{
+		left: 42%;
+    	top:38%;
+	}
+	25%{
+		left: 40%;
+    	top:36%;
+	}
+	50%{
+		left: 38%;
+    	top:38%;
+	}
+	75%{
+		left: 40%;
+    	top:40%;
+	}
+}
+.cloud1:after{
+    content: "";
+    height: 29px;
+    width: 46px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: 48px;
+
+}
+.cloud1:before{
+    content: "";
+    height: 36px;
+    width: 46px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 13px;
+}
+.cloud2{
+    width: 153px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 20%;
+    top:30%;
+    animation:float2 60s ease infinite;
+}
+@keyframes float2{
+	0%,100%{
+		left: 20%;
+    	top:30%;
+	}
+	25%{
+		left: 17%;
+    	top:33%;
+	}
+	50%{
+		left: 20%;
+    	top:30%;
+	}
+	75%{
+		left: 21%;
+    	top:33%;
+	}
+}
+.cloud2:after{
+    content: "";
+    height: 39px;
+    width: 69px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: 58px;
+
+}
+.cloud2:before{
+    content: "";
+    height: 40px;
+    width: 60px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 13px;
+}
+.cloud3{
+    width: 153px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 60%;
+    top:25%;
+    animation:float3 50s ease infinite;
+}
+@keyframes float3{
+	0%,100%{
+		left: 60%;
+    	top:25%;
+	}
+	25%{
+		left: 62%;
+    	top:27%;
+	}
+	50%{
+		left: 64%;
+    	top:25%;
+	}
+	75%{
+		left: 58%;
+    	top:23%;
+	}
+}
+.cloud3:after{
+    content: "";
+    height: 39px;
+    width: 69px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: 18px;
+
+}
+.cloud3:before{
+    content: "";
+    height: 60px;
+    width: 60px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 63px;
+}
+
